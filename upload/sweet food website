@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWEET Food Website</title>
+
+ <link rel="icon" type="image/png" href="food logo.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff7ed, #ffedd5);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .btn {
+      background: #f97316;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ea580c;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 5px;
+      font-size: 1.2rem;
+    }
+    .card p {
+      color: #f97316;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    footer {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <h1>Delicious Food, Anytime</h1>
+    <p>Fresh, tasty, and made with love. Order now or visit us!</p>
+
+    
+  
+
+  <!-- Menu Section -->
+  <section>
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="card">
+        <img src="suya.webp" alt="suya">
+        <h3>Suya</h3>
+        <p>1000 naira each</p>
+      </div>
+      <div class="card">
+        <img src="cat fish.jpg" alt="cat fish">
+        <h3>Rosted Cat Fish</h3>
+        <p>12000 naira</p>
+      </div>
+      <div class="card">
+        <img src="fried rice.jpg" alt="Fried Rice">
+        <h3>A Plate Of Fried Rice</h3>
+        <p>8000 naira</p>
+      </div>
+      <div class="card">
+        <img src="chocolate.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+        <p>5000 naira</p>
+      </div>
+    </div>
+  </section>
+
+<button class="btn" onclick="document.getElementById('orderForm').scrollIntoView({behavior:'smooth'})">
+  Order Now
+</button>
+<form action="https://formspree.io/f/mandynjw" method="POST">
+  <!-- This tells Formspree we are using normal HTML form -->
+  <input type="hidden" name="_subject" value="New Order Received!">
+  
+  <label>Name:</label><br>
+  <input type="text" name="name" required><br>
+
+  <label>Food Item:</label><br>
+  <input type="text" name="food" required><br>
+
+  <label>Quantity:</label><br>
+  <input type="number" name="quantity" required><br>
+
+  <label>Address:</label><br>
+  <textarea name="address" required></textarea><br>
+
+  <button type="submit" class="btn">Submit Order</button>
+</form>
+
+
+
+  <!-- About Section -->
+  <section>
+    <h2>About Us</h2>
+    <p style="max-width: 700px; margin: 0 auto; color: #555;">
+      We believe food should not only taste good but also bring people together.
+      Our chefs use the freshest ingredients to create meals you’ll never forget.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <footer>
+    <h2>Contact Us</h2>
+    <p>📍 123 Food Street, Flavor Town</p>
+    <p>📞 (123) 07078966512</p>
+    <button class="btn">Reserve a Table</button>
+  </footer>
+</body>
+</html>
+
+
+
